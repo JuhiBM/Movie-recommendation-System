@@ -120,7 +120,7 @@ def fetch_trailer(movie_title):
         return None
 @st.cache_data
 def load_data():
-    movies = pd.read_csv("tmdb_5000_movies")
+    movies = pd.read_csv("tmdb_5000_movies.csv")
 
     movies = movies[['title','overview','genres','vote_average']].dropna()
     movies['genres'] = movies['genres'].apply(
